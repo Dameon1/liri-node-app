@@ -1,0 +1,21 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "node-spotify-api": "^1.0.7",
+    "node-twitter-api": "^1.8.0",
+    "omdbapi": "^2.0.1",
+    "request": "^2.83.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
