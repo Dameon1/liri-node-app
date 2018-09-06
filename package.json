@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "fs": "0.0.1-security",
     "node-spotify-api": "^1.0.7",
     "node-twitter-api": "^1.8.0",
