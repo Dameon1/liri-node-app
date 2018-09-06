@@ -22,9 +22,8 @@ let client =  new Twitter ({
 
 //allows for a new spotify call
 let spotify = new Spotify({
-  id: process.env.id || '971abdb0ff9a4029ac6b44d3c3c5cdf7',
+  id: process.env.id, 
   secret: process.env.secret 
-  //|| 'a25fddc921664ef0a144c65ef8089bf0',
 });
 
 //exports the key for twitter(client), and spotify(spotify)

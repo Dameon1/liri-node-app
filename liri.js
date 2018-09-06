@@ -344,8 +344,8 @@ if (actionToTake === doWhatItSays) {
       }
                 
 
-        //if the annonomous action is spotify-this-song
-        if (anonAction === songAction) {
+      //if the annonomous action is spotify-this-song
+      if (anonAction === songAction) {
             
         //give the user back the searched for song
         cl('You searched for: ' + searchItem);
@@ -555,3 +555,5 @@ if (actionToTake === doWhatItSays) {
   });
 //closes out the do-what-says command    
 }
+
+
