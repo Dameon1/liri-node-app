@@ -5,7 +5,7 @@ let fs = require('fs');
 let keys = require('./keys.js');
 let request = require('request');
 
-let cl = (x) => console.log(x);
+let cl = (info) => console.log(info);
 
 let appendToFile = (info) => { fs.appendFile('./log.txt', info +',', (err) => {
   if (err) { cl(err); } });
@@ -13,10 +13,10 @@ let appendToFile = (info) => { fs.appendFile('./log.txt', info +',', (err) => {
 
 let getTweets = () => {
   keys.client.get('statuses/user_timeline','Dameon_H20', (error, tweets, response) => {
-    if(error) { return cl('There was a problem occuring at: ' + error); }
-    tweets.forEach(tweet => {
-      cl(`\n'+'Tweet #'+(i+1)${tweet.text}\n Created On: ' + ${tweet.created_at}\n-------------------'`);
-      appendToFile('\n'+'Tweet #'+(i+1)+' '+tweet.text);
+    if(error) { return cl(`There was a problem occuring at:${error}`); }
+    tweets.forEach((tweet,i) => {
+      cl(`\nTweet #(${i+1}) ${tweet.text}\n Created On:${tweet.created_at}\n-------------------`);
+      appendToFile(`\nTweet #(${i+1}) ${tweet.text}`);
     });   
   });
 };
