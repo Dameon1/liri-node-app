@@ -1,6 +1,6 @@
 # liri-node-app
 
-This liri node app makes use of 'npm packages and an API's' from Twitter, Spotify, and OMDB.
+This liri node app is a Language Interpretation and Recognition Interface that makes use of npm packages and an API's from Twitter, Spotify, and OMDB.
 
 A user can enter in one of the following commands after a <node index.js> command that is in following "()" in the the terminal and will get the following returns.
 
