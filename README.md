@@ -2,9 +2,9 @@
 
 This liri node app makes use of 'npm packages and an API's' from Twitter, Spotify, and OMDB.
 
-A user can enter in a <node liri.js> command that is in "()" in the the terminal with the following returns that follow.
+A user can enter in one of the following commands after a <node index.js> command that is in following "()" in the the terminal and will get the following returns.
 
-1. (my-tweets), uses the [node-twitter-api], which can be found here 
+1. (tweets), uses the [node-twitter-api], which can be found here 
    (https://apps.twitter.com/app/new)
    
    Returns the last 20 tweets along with the date and time they were created.
@@ -12,7 +12,7 @@ A user can enter in a <node liri.js> command that is in "()" in the the terminal
    (https://developer.twitter.com/en/docs/api-reference-index);
 
 
-2. (spotifiy-this-song (space) song desired), uses the [node-spotify-api], which can be found here                                       (https//www.npmjs.com/package/node-spotify-api)
+2. (spotifiy (space) song desired), uses the [node-spotify-api], which can be found here                                       (https//www.npmjs.com/package/node-spotify-api)
 
     Returns information on the song inputed. 
     Song Name, Group, A link to the song, and the Album, based on the Spotify API.
@@ -21,7 +21,7 @@ A user can enter in a <node liri.js> command that is in "()" in the the terminal
     If no song was selecter then the displayed song will be Ace of Base "The Sign".
 
 
-3. (movie-this (space) movie desired), uses the [omdbapi], whichh can be found here,
+3. (movie (space) movie desired), uses the [omdbapi], whichh can be found here,
    (https://www.omdbapi.com/)
 
    Returns the follow information based on the movie selected
@@ -38,4 +38,4 @@ A user can enter in a <node liri.js> command that is in "()" in the the terminal
     If no movie was selected, then the move "Mr. Nobody" will be displayed.
 
 
-4.(do-what-it-says),grabs information from the outside source random.txt and does one of the three commands based on what the           command is.
+4.(do-what) Grabs information from the log.txt file and does one of the three commands based on what the           command is.
