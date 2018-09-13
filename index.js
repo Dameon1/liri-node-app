@@ -31,7 +31,7 @@ let displaySongInfo = (songName='This is America') => {
   );   
 };
 
-let displayMovieInfo = (movieArg='Mr.Nobody') => {
+let displayMovieInfo = (movieArg='Cloak And Dagger') => {
   let queryUrl = `http://www.omdbapi.com/?t=${movieArg}&y=&plot=short&apikey=40e9cece`;
   request(queryUrl,(error, response, body) => {
     if(error) { return cl(`An error occured at:${error}`); }
