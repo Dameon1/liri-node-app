@@ -10,7 +10,7 @@ const appendToFile = (info) => { fs.appendFile('./log.txt', info +',', (err) => 
   if (err) { cl(err); } });
 };
 
-const getTweets = () => {
+export const getTweets = () => {
   keys.client.get('statuses/user_timeline','Dameon_H20', (error, tweets, response) => {
     if(error) { return cl(`There was a problem occuring at:${error}`); }
     tweets.forEach((tweet,i) => {
@@ -20,7 +20,7 @@ const getTweets = () => {
   });
 };
 
-const displaySongInfo = (songName='This is America') => {
+export const displaySongInfo = (songName='This is America') => {
   keys.spotify.search({ type: 'track' , query: songName}, (error, data) => {
     if (error) { return cl(`Your song was not found:\n${error}`); } 
     const songInfo = data.tracks.items[0];
@@ -30,7 +30,7 @@ const displaySongInfo = (songName='This is America') => {
   );   
 };
 
-const displayMovieInfo = (movieArg='Cloak And Dagger') => {
+export const displayMovieInfo = (movieArg='Cloak And Dagger') => {
   const queryUrl = `http://www.omdbapi.com/?t=${movieArg}&y=&plot=short&apikey=40e9cece`;
   request(queryUrl,(error, response, body) => {
     if(error) { return cl(`An error occured at:${error}`); }

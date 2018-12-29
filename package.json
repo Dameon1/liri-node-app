@@ -9,13 +9,18 @@
     "node-spotify-api": "^1.0.7",
     "node-twitter-api": "^1.8.0",
     "omdbapi": "^2.0.1",
-    "request": "^2.83.0",
+    "request": "^2.88.0",
     "spotify": "^0.3.0",
     "twitter": "^1.7.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha __test__/test.js --timeout 8000"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.1.4",
+    "mocha": "^5.2.0"
   },
   "author": "",
   "license": "ISC"

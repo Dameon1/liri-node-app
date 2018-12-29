@@ -1,8 +1,8 @@
-# liri-node-app
+# Liri-Node-App
 
 This liri node app is a Language Interpretation and Recognition Interface that makes use of npm packages and an API's from Twitter, Spotify, and OMDB.
 
-A user can add one of the these commands that are in "()" paranthesis following a "node index.js" on the command line and will be get back the deisred information.
+A user can add one of the these commands that are in "()" parenthesis following a "node index.js" on the command line and will be get back the desired information.
 
 1. (tweets), uses the [node-twitter-api], which can be found here 
    (https://apps.twitter.com/app/new)
@@ -18,9 +18,9 @@ A user can add one of the these commands that are in "()" paranthesis following 
     Song Name, Group, A link to the song, and the Album, based on the Spotify API.
     Further documentation of the API endpoints can be found here. (https://developer.spotify.com/web-api/endpoint-reference/)
 
-    If no song was selecter then the displayed song will be Childish Gambino "This is America".
+    If no song was selected then the displayed song will be Childish Gambino "This is America".
 
-3. (movie (space) movie desired), uses the [omdbapi], whichh can be found here,
+3. (movie (space) movie desired), uses the [omdbapi], which can be found here,
    (https://www.omdbapi.com/)
 
    Returns the follow information based on the movie selected
@@ -32,7 +32,7 @@ A user can add one of the these commands that are in "()" paranthesis following 
     * Language of the movie.
     * Plot of the movie.
     * Actors in the movie.
-    The API endpoints are not redily available for screening.[ request(queryUrl, function(error, response, body)]  with a logging of the body will show the information given back through the API call.
+    The API endpoints are not readily available for screening.[ request(queryUrl, function(error, response, body)]  with a logging of the body will show the information given back through the API call.
 
     If no movie was selected, then the move "Cloak And Dagger" will be displayed.
 
