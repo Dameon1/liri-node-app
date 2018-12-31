@@ -10,7 +10,7 @@ const appendToFile = (info) => { fs.appendFile('./log.txt', info +',', (err) => 
   if (err) { cl(err); } });
 };
 
-export const getTweets = () => {
+const getTweets = () => {
   keys.client.get('statuses/user_timeline','Dameon_H20', (error, tweets, response) => {
     if(error) { return cl(`There was a problem occuring at:${error}`); }
     tweets.forEach((tweet,i) => {
@@ -20,17 +20,19 @@ export const getTweets = () => {
   });
 };
 
-export const displaySongInfo = (songName='This is America') => {
+const displaySongInfo = (songName='This is America') => {
   keys.spotify.search({ type: 'track' , query: songName}, (error, data) => {
     if (error) { return cl(`Your song was not found:\n${error}`); } 
     const songInfo = data.tracks.items[0];
     cl(`Artist: ${songInfo.artists[0].name}\nSong title: ${songInfo.name}\nLink to song: ${songInfo.external_urls.spotify}\nAlbum title: ${songInfo.album.name}\n-----------------`);
     appendToFile(`Artist: ${songInfo.artists[0].name}\nSong title: ${songInfo.name}`);
+    return ['something']
+    //`Artist: ${songInfo.artists[0].name}\nSong title: ${songInfo.name}\nLink to song: ${songInfo.external_urls.spotify}\nAlbum title: ${songInfo.album.name}\n-----------------`;
   }
   );   
 };
 
-export const displayMovieInfo = (movieArg='Cloak And Dagger') => {
+const displayMovieInfo = (movieArg='Cloak And Dagger') => {
   const queryUrl = `http://www.omdbapi.com/?t=${movieArg}&y=&plot=short&apikey=40e9cece`;
   request(queryUrl,(error, response, body) => {
     if(error) { return cl(`An error occured at:${error}`); }
